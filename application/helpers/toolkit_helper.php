@@ -403,7 +403,9 @@ function zero_to_space($value){
  * @return bool
  */
 function string_to_boolean($s){
-    if(is_bool($s) && strcasecmp($s,'TRUE') == 0){
+    //is_bool PHP: 5.4.7 无法运行 bug?
+//    if(is_bool($s) && strcasecmp($s,'TRUE') == 0){
+    if(strcasecmp($s,'TRUE') == 0){
         return TRUE;
     }else{
         return FALSE;
@@ -1104,10 +1106,10 @@ function field_list($table){
     if(_user_config('technical_name')){
         //fix bug table_schema服务器版本区分大小写
         return lazy_get_data("select COLUMN_NAME as value,concat(COLUMN_NAME,' - ',COLUMN_COMMENT) as label from INFORMATION_SCHEMA.COLUMNS
-        where TABLE_SCHEMA = 'cts' AND  table_name = '".$table."'");
+        where TABLE_SCHEMA = 'csp' AND  table_name = '".$table."'");
     }else{
         return lazy_get_data("select COLUMN_NAME as value,COLUMN_COMMENT as label from INFORMATION_SCHEMA.COLUMNS
-        where TABLE_SCHEMA = 'cts' AND  table_name = '".$table."'");
+        where TABLE_SCHEMA = 'csp' AND  table_name = '".$table."'");
     }
 
 }

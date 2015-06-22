@@ -102,9 +102,10 @@ class Order extends CI_Controller {
     function create(){
         $om = new Order_model();
         $order_type = v('order_type');
+        $category_control = _config('category_control');
         if($_POST){
             //非分类管理，默认分类设置时可默认
-            if(!_config('category_control')){
+            if(!$category_control){
                 $c = $om->default_category($order_type);
                 if(!is_null($c)){
                     $_POST['category'] = $c['value'];
@@ -159,8 +160,7 @@ class Order extends CI_Controller {
                 if(!empty($os)){
                     $data['contact_data'] = json_encode($os);
                 }
-
-                if(_config('category_control')){
+                if($category_control){
                     $au = new Auth_model();
                     $data['categories'] = $au->can_choose_order_categories($order_type,$om->default_status($order_type));
                 }
@@ -190,7 +190,7 @@ class Order extends CI_Controller {
             //是否只能看到自己的订单
             $am = new Auth_model();
             $pass = true;
-            if($am->check_auth('only_mine_control',array('ao_true_or_false'=>'TRUE')) ){
+            if(!$am->check_auth('only_mine_control',array('ao_true_or_false'=>'FALSE','ao_order_type'=>$order['order_type'])) ){
                 if($order['created_by'] == _sess('uid') || $order['leader_id'] == _sess('uid') || $order['manager_id'] == _sess('uid')){
                     $pass = true;
                 }else{
