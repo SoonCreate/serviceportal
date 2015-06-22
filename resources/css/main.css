@@ -1,0 +1,841 @@
+@CHARSET "UTF-8";
+/*Global Detail*/
+*{
+    /*box-sizing:border-box;
+    -moz-box-sizing: border-box;*/
+    outline: none !important;
+ }
+a {
+   color: #4B84C2;
+   text-decoration: none !important;
+}
+a:hover,
+a:focus {
+   color: #2a6496 ;
+   text-decoration: none !important;
+}
+a:focus {
+    outline:none; ;
+    /*outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;*/
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0 5px 5px 0;
+    margin: 0 0 0 0;
+    background-color: #BDC3C7 !important;
+    font-size: 12px;
+    overflow: hidden;
+}
+.row{
+	margin-left:0 !important;
+	margin-right:0 !important;
+	margin-bottom:10px !important;
+}
+.inline *{
+    display: inline-block;
+    float: left;
+}
+.inline label {
+    padding:3px 0;
+
+}
+
+
+/*Layout CSS*/
+#mainContainer {
+    height: 100%;
+    width: 100%;
+    background-color: #BDC3C7;
+    /*background-color: #BDC3C7;*/
+}
+
+#headerPane {
+	padding:3px 0;
+	height:54px;
+	font-size:28px;
+	/*background:#273F56;*/
+	position:relative;
+	z-index:2;
+    background-color: #BDC3C7;
+	margin-bottom:20px;
+}
+#mainSplitter{
+    margin:0 10px 10px 20px;
+    background: #2C3E50;
+    border: 1px solid #969B9E;
+    border-radius: 8px 0 0  8px;
+}
+
+.comLogo{
+    margin-top:5px;
+    padding:0 30px;
+    height: 35px;
+}
+.comLogoImg{
+    width: 50px;
+    height: 35px;
+    float:left;
+}
+.comLogoText{
+    min-width:165px;
+    padding-top:6px;
+    float:left;
+    font-size: 25px;
+    font-weight: bolder;
+}
+/*Left TabMenu*/
+
+.dijitTabContainerLeft-tabs{
+    padding: 50px 0 0 20px;
+    width:180px;
+    border:0 solid #fff !important;
+}
+
+.dijitTabContainerLeft-tabs .dijitTab {
+    height: 37px;
+    margin-bottom: 10px !important;
+    margin-right: 10px;
+    padding:12px 0 15px 8px !important;
+    border: 0px solid #29BB9C;
+    background-color:#2C3E50;
+    font-family:"Microsoft Yahei";
+    font-weight: bolder;
+    font-size:14px;
+    color:#ECF0F1;
+    border-radius: 0px !important;
+}
+
+.dijitTabContainerLeft-tabs .dijitTabChecked {
+    margin:0 0px 10px 0 !important;
+    border: 0px solid #B5BCC7;
+    background-color:#fff !important ;
+    color:#1ABC9C;
+    border-right: 0px solid #3CACE7 #29BB9C #2C3E50 ;
+}
+.dijitTabContainerLeft-container{
+    border: 1px solid #979C9F;
+    /*margin:0  10px 10px 0;*/
+}
+
+.dijitTabContainerLeft-tabs .tabLabel{
+    display:block;
+    float:left;
+    height: 40px;
+    width:90px;
+    padding: 10px 0px 11px 10px !important;
+
+}
+.dijitTabContainerLeft-tabs .dijitTabChecked .tabLabel{
+    border-right: 0px solid #3CACE7;
+}
+.dijitTabContainerLeft-tabs .dijitTabButtonIcon{
+    display:block;
+    float:left;
+    height: 50px;
+    width:50px;
+    margin-right: 10px;
+}
+.dijitTabContainerLeft-tabs .dijitTab {
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+
+
+/*LoginPage form*/
+.login{
+    width:400px;
+    border-radius: 5px 5px 0 0;
+    outline: 0;
+    border: 1px solid #C7C7C7;
+    font-size: 12px;
+    line-height: 1.666;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.32);
+    background: #fafafa;
+    position:fixed;
+    left:50%;
+    top:50%;
+    margin-left:-200px;
+    margin-top:-180px;
+    background-color: #ECF0F1;
+    font-family:"Microsoft Yahei";
+}
+.loginTitleBar {
+    border-radius: 4px 4px 0 0;
+    text-align: left;
+    padding: 12px 50px;
+    min-height: 40px;
+    border-bottom: 1px solid #c2c2c2;
+    background: #eee;
+}
+.loginTitleBar img{
+    float:left;
+}
+.loginTitleBar h3{
+    margin: 12px 0 0 5px !important;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    float:left;
+}
+.loginPaneContent {
+    padding: 20px 0px 10px 0 !important;
+    position: relative;
+    width:398px;
+}
+
+.loginPaneContent dl dt{
+    width:120px !important;
+    display:inline-block;
+
+}
+.loginPaneContent dl dt label{
+    margin-right: 5px;
+}
+.loginPaneContent dl dt label{
+    padding:3px 0;
+    display:inline-block;
+    color:#222 !important;
+    font-family:Microsoft Yahei;
+
+}
+.loginPaneContent dl dd{
+    margin-left:120px !important;
+}
+.loginPaneActionBar {
+    background-color: #efefef;
+    padding: 12px 5px 2px 7px;
+    text-align: right;
+    border-top: 1px solid #fff;
+}
+
+.errorContent{
+    min-height: 50px;
+    padding: 0px 20px 20px 50px;
+    font-size: 15px;
+    color:#777;
+}
+
+.paneltitle{
+    border-radius: 3px 3px 0 0;
+    padding: 0 10px;
+    height: 34px;
+    line-height: 34px;
+    margin-top: 0;
+    margin-bottom:0 !important;
+    background: #E9E9E9;
+}
+.paneltitle h3{
+    font-family:Microsoft Yahei;
+    color:#666;
+    font-weight: bolder;
+    padding-top:9px !important;
+    margin:0 !important;
+}
+#pro{
+    height: 10px;
+    border-bottom:1px solid #d3d3d3;
+}
+/*ScrollBar Style*/
+::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+    background: #fff;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    border: 5px solid transparent;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: 1px 1px 5px rgba(0,0,0,.2) inset;
+}
+
+::-webkit-scrollbar-thumb {
+    min-height: 20px;
+    background-clip: content-box;
+    box-shadow: 0 0 0 5px rgba(0,0,0,.2) inset;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+/*DetailPage CSS*/
+.paneltitle{
+    border-radius: 3px 3px 0 0;
+    padding: 0 10px;
+    height: 34px;
+    line-height: 34px;
+    margin-top: 0;
+    margin-bottom:0 !important;
+    background: #E9E9E9;
+}
+.paneltitle h3{
+    color:#666;
+    font-size: 13px;
+}
+.userd{
+    background:#F9F9F9;
+    padding :20px 10px 5px 10px;
+    margin-bottom:20px;
+}
+.userd dl{
+    margin-bottom: 15px;
+}
+.userd dl dt{
+    width:120px !important;
+    display:inline-block;
+    float:left;
+    text-align:right;
+}
+.userd dl dd{
+    margin-left:20px !important;
+    display:inline-block;
+    float:left;
+    min-width:500px;
+}
+.userd dl dt label,
+.userd dl dd label{
+    font-weight:lighter !important;
+    padding:3px 0;
+    display:inline-block;
+    color:#757575;
+}
+.userd dl dt label{
+
+}
+.userd dl dd label,
+.userd dl dd input{
+    display:inline-block;
+    float:left;
+    margin-right:10px;
+}
+
+.panelbottom{
+    border-radius: 3px;
+    padding: 8px 0px 7px 155px;
+    height: 45px;
+    line-height: 45px;
+    margin-top: 0;
+    margin-bottom:10px !important;
+    background: #E9E9E9;
+    text-align:left;
+}
+
+/*form error box*/
+.formalert {
+    padding: 8px 35px 8px 14px;
+    margin-bottom: 20px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    background-color: #fcf8e3;
+    border: 1px solid #fbeed5;
+    /*-webkit-border-radius: 4px;
+    -moz-border-radius: 4px;*/
+}
+.formalert h4 {
+    display: inline-block;
+    color: #c09853;
+    font-size:14px;
+    font-family:Microsoft Yahei;
+    margin-bottom: 10px;
+}
+
+.formalert h4 {
+    margin: 0;
+}
+.formalert ul{
+    list-style: none;
+    margin:0;
+    margin-left:-38px;
+}
+.formalert ul li{
+    font-size:12px;
+    color: #b94a48;
+
+}
+
+.formalert .close {
+    position: relative;
+    top: -2px;
+    right: -21px;
+    line-height: 20px;
+}
+
+
+/* FixDiv CSS*/
+.fixbottom{
+    position: fixed;
+    left: 221px;
+    right: 13px;
+    bottom: 12px;
+    box-shadow: 0 -3px 3px #ddd;
+    background-color: #f6f6f6;
+    padding: 8px 30px;
+    z-index: 991;
+}
+.fixtop{
+    position: fixed;
+    left: 222px;
+    right:12px;
+    top: 81px;
+    padding: 10px 30px;
+    background-color: #ECF0F1;
+    border-bottom: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+    z-index: 990;/*dijitDialog is 999*/
+    font-family:Microsoft Yahei;
+    color:#869198;
+
+}
+.fixtop a{
+    color:#869198;
+    display: inline-block;
+    padding:3px 5px;
+    border-radius: 2px;
+}
+.fixtop a:hover{
+    background:#fff;
+    color:#26AF92;
+}
+.fixnavbar{
+    position: fixed;
+    z-index:888;
+    top:30px;
+    right: 15px;
+    height:41px;
+    font-size:11px;
+}
+
+.fixnavbar ul li a{
+    display: inline-block;
+    padding: 3px 5px;
+    border-radius: 3px;
+    color:#777;
+    font-weight: bold;
+}
+.fixnavbar ul li a:hover{
+    color:#fff;
+    background: #26AF92;
+}
+
+.fixnavbar ul li i{
+    font-size: 17px;
+    padding-top:5px !important;
+    margin-right: 6px;
+}
+
+.messageno{
+    z-index: 992;
+    position: fixed;
+    left: 85px;
+    top: 330px;
+}
+.scbadge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 2px 4px;
+    font-size: 8px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 1;
+    vertical-align: baseline;
+    white-space: nowrap;
+    text-align: center;
+    background-color: #cc0000 !important;
+    border-radius: 15px;
+    border: 2px solid #fff;
+}
+/*TAB内容框，边框bug相关*/
+.dijitTabContainerLeft-dijitContentPane{
+    /*右内容主框bug*/
+    box-sizing: content-box !important;
+    margin-top:50px;
+    padding:20px 30px !important;
+}
+.sc .dijitContentPane {
+
+}
+.dijitTabContainerLeftChildWrapper{
+
+
+}
+.dijitTabContainerLeft-container{
+
+}
+
+/* APP list*/
+.applist{
+    padding: 6px 41px 14px 4px;
+    display: block;
+}
+
+.applist li {
+    list-style: none;
+    position: relative;
+    float: left;
+    margin-bottom: 14px;
+    text-align: center;
+}
+
+.applist li .icon {
+    position: absolute;
+    margin: 0 32px;
+    padding: 20px;
+    width:35px;
+    height:35px;
+    cursor: pointer;
+    border: 1px solid #4B84C2;
+    color:#FFF;
+    background: #4B84C2;
+
+}
+.applist li .text{
+    margin: 75px 32px 0 32px;
+    padding:3px 0;
+    width:75px;
+    height: 25px;
+    background: #fff;
+    color:#4B84C2;
+    font-family:Microsoft Yahei;
+    text-align: center;
+    cursor: pointer;
+}
+
+.applist li:hover .icon {
+    background-color:#2C3E50;
+    border: 1px solid #2C3E50;
+    color:#4B84C2;
+}
+.applist li:hover .text{
+    color:#2C3E50;
+}
+.applist li:hover .text a{
+    color:#2C3E50;
+    text-decoration: none;
+}
+
+.headline{
+    display: block;
+    margin: 10px 0 15px 30px;
+    border-bottom: 1px dotted #e4e9f0;
+
+}
+.headline h2{
+    margin: 0 0 -2px 0;
+    padding-bottom: 5px;
+    display: inline-block;
+    color:#273F56;
+    font-size:17px;
+    font-family:Microsoft Yahei;
+    border-bottom: 2px solid #37AFE4;
+}
+.headline h2 i{
+    margin-right:10px;
+}
+
+
+/*各模块根据id名，上下留白*/
+/*#m_5_module {*/
+     /*margin-top :50px;*/
+    /*margin-bottom: 50px;*/
+ /*}*/
+/*#m_6_module {*/
+    /*margin-top :50px;*/
+/*}*/
+/*#m_4_module {*/
+    /*margin-top :50px;*/
+    /*margin-bottom: 50px;*/
+/*}*/
+/*#m_7_module {*/
+    /*margin-top :50px;*/
+/*}*/
+/*#module_3 {*/
+    /*margin-top :0px;*/
+    /*padding-top:30px !important;*/
+/*}*/
+/*.my_functions{*/
+    /*margin-top :0px;*/
+    /*padding-top:30px !important;*/
+/*}*/
+.leftinput{
+    border-radius: 4px 0 0 4px !important;
+    margin-right: 0 !important;
+    height: 19px;
+    /*height: 30px !important;
+    box-sizing:border-box;
+    -moz-box-sizing: border-box;*/
+}
+.midinput{
+    border-radius: 0 !important;
+    margin-left:-1px !important;
+    margin-right:0 !important;
+}
+.midinput tr{
+    height:17px !important;
+}
+.sc .rightbtn .dijitButtonNode{
+    border-radius: 0 4px 4px 0 !important;
+    margin-left: -1px !important;
+    height: 19px;
+}
+.sc .midbtn .dijitButtonNode{
+    border-radius: 0 !important;
+    margin-left: -1px !important;
+}
+.sc .left .dijitButtonNode{
+    border-radius: 4px 0 0 4px !important;
+    margin-left: -1px !important;
+}
+/**/
+.userd dl dd.contentContainer{
+    display: block;
+    border: 0px solid #ddd;
+    border-radius: 2px;
+    padding: 5px 10px;
+
+}
+.userd dl dd.contentContainer .row{
+    margin-bottom: 0 !important;
+}
+.ddname{
+    display: block;
+    float:left;
+    margin-right:0px;
+    color:#26AF92;
+    font-size:10px;
+    margin-right: -25px;
+    font-family:Microsoft Yahei;
+}
+.ddtime{
+    display: inline-block;
+    color: #989898;
+    float: right;
+    margin-left:30px;
+}
+.sc .dijitButtonNode a{
+    color:#555;
+}
+.righttip {
+    display: block;
+    margin-bottom:5px;
+    padding-left:50px;
+    position:relative;
+    float: left;
+}
+
+.triangle {
+    position:absolute;
+    top:15px;
+    margin-top:-8px;
+    left:42px;
+    display:block;
+    width:0;
+    height:0;
+    overflow:hidden;
+    line-height:0;
+    border-bottom:8px solid #FFF;
+    border-top:8px solid #FFF;
+    border-left:none;
+    border-right:8px solid #ECF0F1;
+}
+.tooltipinner {
+    min-width: 400px;
+    padding: 3px 8px;
+    color: #2C3E50;
+    text-align: left;
+    text-decoration: none;
+    background-color: #ECF0F1;
+    border-radius: 4px;
+    line-height: 28px;
+}
+
+/*table*/
+/*
+.table{
+    border-top:1px solid #CECECE !important;
+    border-bottom:1px solid #CECECE !important;
+
+}
+.table th{
+    background: #EEEEEE !important;
+    color:#999999;
+    font-family:Microsoft Yahei;
+}
+.table tr:hover{
+    background: #F5F5F5;
+    cursor: pointer;
+}
+*/
+/*index loading*/
+#preloader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    display:inline-block;
+    background: #29BB9C;
+    width:178px;
+    height:19px;
+    padding: 7px 10px;
+    color:#fff;
+    font-family:"Microsoft Yahei";
+    font-weight: bold;
+    z-index: 999999;
+    margin-right: 10px;
+    margin:0 !important;
+}
+
+
+/*register&demo page*/
+#reg{
+    width:900px;
+    margin:0 auto;
+    background: #BDC3C7;
+}
+#regHeader {
+    margin-top:30px !important;
+    height:60px;
+    width:900px;
+    margin:0 auto;
+    position:relative;
+    z-index:2;
+    background:#BDC3C7 ;
+}
+#regPage{
+    width:900px;
+    border-radius: 5px 5px 0 0;
+    border: 1px solid #C7C7C7;
+    font-size: 12px;
+    line-height: 1.666;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.32);
+    background: #fafafa;
+    background-color: #ECF0F1;
+    margin-top:10px;
+    padding:10px 20px;
+}
+#regPage .userd{
+    background: none;
+}
+#regPage dl{
+    margin-bottom: 25px !important;
+}
+#regPage ul li{
+    margin-bottom: 30px !important;
+}
+#regPage ul li .text{
+    height:45px;
+    background: #ECF0F1;
+
+}
+#regPage h4 {
+    margin: -10px -20px 20px -20px;
+    padding: 15px 20px 3px 20px;
+    height: 30px;
+    background-position: 0 0;
+    background-color: #6495C6;
+    border-radius: 5px 5px 0 0;
+    color:#fff;
+    font-size: 18px;
+    font-family:Microsoft Yahei;
+}
+
+/*.sc .dijitDialog {
+    min-width: 275px !important;
+    min-height: 140px !important;
+}*/
+
+/* 首页进度条*/
+.sc .dijitProgressBar {
+    margin: 1px 0 1px 0;
+    height: 10px;
+}
+.sc .dijitProgressBarEmpty {
+    background-color: #fff;
+    border-color: #19BC9C;
+}
+.sc .dijitProgressBarTile {
+    background-color: #19BC9C;
+}
+
+.sc .dijitProgressBarFull {
+    margin:1px 1px;
+    height: 8px;
+    border: 0px solid  #19BC9C;
+    border-right-width: 1px;
+}
+.sc .dijitProgressBarLabel {
+    display: none;
+    color: #000000;
+}
+
+
+.messageContainer {
+    min-height: 60px;
+    line-height: 30px;
+    padding: 5px 5px 0 5px;
+    margin: 5px 30px;
+}
+.messageContainer .messageContent {
+    margin-left: 70px;
+    margin-top: -40px;
+    table-layout: fixed;
+    word-break: break-all;
+    overflow: hidden;
+    font-size: 16px;
+}
+.messageContainer .messageContent p{
+    width: 350px;
+    min-height: 30px;
+    display: block;
+    font-size:12px;
+}
+/* “...”控件 相关*/
+
+.sc .dijitMoreButton .dijitArrowButtonInner {
+    background-image: url("../images/comboxIcon.png");
+    background-position: -126px 0;
+    background-repeat: no-repeat;
+    margin-top: 4px;
+    width: 15px;
+}
+.sc .dijitMoreButton .dijitDownArrowButtonHover .dijitArrowButtonInner {
+    background-position: -126px -18px;
+}
+
+/*tool工具栏按钮优化*/
+.sc .dijitToolbar .dijitButton .dijitButtonNode {
+    border-width: 0;
+    padding: 3px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition-property: background-color;
+    -moz-transition-property: background-color;
+    transition-property: background-color;
+    background-color: rgba(171, 214, 255, 0);
+    background-image: none;
+    border: 1px solid #CBCECF;
+    color:#2C3E50;
+
+}
+.sc .dijitToolbar .dijitButtonHover .dijitButtonNode {
+    border: 1px solid #1ABC9C;
+    background-color: #fff;
+    color:#1ABC9C;
+}
+
+/*失效的time控件列表不显示*/
+.sc .dijitTimePickerItemDisabled{
+     display: none;
+}
+
+.sc .dijitBottonMessageError{
+    font-weight : bold;
+    color: #d46464;
+}
